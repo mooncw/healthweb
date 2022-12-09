@@ -6,7 +6,9 @@
 초기 단계를 1차 배포 완료하였으나 카메라가 작동이 안됨
 
 ### 폴더 및 파일 설명
-장고 프로젝트인 health 
+장고 프로젝트인 health 폴더
+
+웹을 실행하기 위해 필요한 설치 라이브러리들 requirements.txt
 
 ### 주소
 ec2-52-78-106-13.ap-northeast-2.compute.amazonaws.com
