@@ -6,7 +6,7 @@
 초기 단계를 1차 배포 완료하였으나 카메라가 작동이 안됨
 
 ### 폴더 및 파일 설명
-
+장고 프로젝트인 health 
 
 ### 주소
 ec2-52-78-106-13.ap-northeast-2.compute.amazonaws.com
