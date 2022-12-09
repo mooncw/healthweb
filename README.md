@@ -39,7 +39,7 @@ mediapipe pose
 
 일어나면 카운팅이 초기화 됩니다.
 
-### 주소
+### 주소(현재 중지상태)
 ec2-52-78-106-13.ap-northeast-2.compute.amazonaws.com
 
 ### 한계 및 보완점
