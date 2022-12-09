@@ -6,7 +6,7 @@
 초기 단계를 배포 하였으나 카메라가 작동이 안됨
 
 ### 주소
-https://ec2-52-78-106-13.ap-northeast-2.compute.amazonaws.com
+ec2-52-78-106-13.ap-northeast-2.compute.amazonaws.com
 
 ### 폴더 및 파일 설명
 
