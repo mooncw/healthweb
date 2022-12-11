@@ -17,6 +17,9 @@ def screen(request):
     print("HTML에서 넘어온 데이터: ", kind)
     return render(request, 'screen.html', {'kind': kind})
 
+def testweb(request):
+    return render(request, 'testweb.html')
+
 class VideoCamera(object):
     def __init__(self, kind):
             self.kind = kind

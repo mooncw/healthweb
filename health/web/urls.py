@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('screen', views.screen, name='screen'),
     path('detectme', views.detectme, name='detectme'),
+    path('testweb', views.testweb, name='testweb'),
 ] 
