@@ -20,6 +20,9 @@ def screen(request):
 def testweb(request):
     return render(request, 'testweb.html')
 
+def testweb2(request):
+    return render(request, 'testweb2.html')
+
 class VideoCamera(object):
     def __init__(self, kind):
             self.kind = kind
