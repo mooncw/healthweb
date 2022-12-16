@@ -12,8 +12,25 @@
     <a href='/'> 홈 </a>
     <h1>{{kind}}</h1>
     <div align="center">
-        <img src="http://127.0.0.1:8000/detectme" alt="새로고침 해주세요" />
+        <img src="http://127.0.0.1:8000/detectme" width="640" height="480" alt="새로고침 해주세요" />
     </div>
+
+    <script>
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+                var video = document.getElementById('video');
+                video.srcObject = stream;
+                video.play();
+            });
+        }
+
+        // var canvas = document.getElementById('canvas');
+        // var context = canvas.getContext('2d');
+        // var video = document.getElementById('video');
+        // document.getElementById("webcamBtn").addEventListener("click", function () {
+        //     context.drawImage(video, 0, 0, 960, 720);
+        // });
+    </script>
 </body>
 
 </html>
