@@ -37,7 +37,7 @@ mediapipe pose
 
 푸쉬업을 하면 올라올 때 카운팅을 합니다.
 
-### 주소(현재 중지상태)
+### 주소(현재 동작 중)
 https://myhealthweb.site
 
 ### 한계 및 보완점
