@@ -46,7 +46,7 @@
   </div>
 
   <!-- MEDIAPIPE OUTPUT -->
-  <h1>{{id}}</h1>
+  <!-- <h1 id="kind">{{id}}</h1> -->
   <p>
     Mediapipe Pose Detection
   </p>
@@ -81,7 +81,7 @@
       spinner.style.display = 'none';
     };
 
-    const kind = document.querySelector('h1').innerText
+    // const kind = document.getElementsById('kind')
     var count = 0
     var cur_status = 'none'
 
@@ -244,26 +244,25 @@
         return status
       }
       
-      if (kind == 'pushup') {
-        if (get_push_ready(results, get_direction(results)) == 'ready') {
-          let status = get_pushup_status(results, get_direction(results))
-          if (cur_status != status) {
-            if (status == 'up') {
-              if (cur_status == 'down') {
-                count += 1
-              }
+      if (get_push_ready(results, get_direction(results)) == 'ready') {
+        let status = get_pushup_status(results, get_direction(results))
+        if (cur_status != status) {
+          if (status == 'up') {
+            if (cur_status == 'down') {
+              count += 1
             }
-            cur_status = status
           }
+          cur_status = status
         }
-        // else {
-        //   count = 0
-        // }
       }
+      // else {
+      //   count = 0
+      // }
+
 
       // let testvalue = JSON.stringify(results.poseLandmarks[32].z);
       let testvector = [1,2,3]
-      document.getElementById("counting").innerHTML=[count, kind];
+      document.getElementById("counting").innerHTML=[count];
       // document.getElementById("counting").innerHTML=get_pushup_status(results, get_direction(results));
 
       canvasCtx5.restore();
