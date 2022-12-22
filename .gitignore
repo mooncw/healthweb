@@ -3,3 +3,6 @@ my-pose-model/
 /*.html
 /*.py
 /*.avi
+/*.css
+/*.jpg
+features/
