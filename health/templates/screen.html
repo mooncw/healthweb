@@ -261,9 +261,93 @@
         // }
       }
 
+
+      //squat
+      function get_squat_ready(results, dir) {
+        let ready = 'notready'
+        if (dir == 'right') {
+          let right_hip = results.poseLandmarks[23]   //24
+          let right_ankle = results.poseLandmarks[27]   //28
+
+          let right_ankle_visibility = results.poseLandmarks[27].visibility
+
+          let degree = get_pro_degree(right_hip, right_ankle)
+
+          if (degree > 60 && right_ankle_visibility > 0.5) {
+            ready = 'ready'
+          }
+        return ready
+        }
+        else if (dir == 'left') {
+          let left_hip = results.poseLandmarks[24]
+          let left_ankle = results.poseLandmarks[28]
+
+          let left_ankle_visibility = results.poseLandmarks[28].visibility
+
+          let degree = get_pro_degree(left_hip, left_ankle)
+
+          if (degree > 60 && left_ankle_visibility > 0.5) {
+            ready = 'ready'
+          }
+        return ready
+        }
+        return ready
+      }
+
+      function get_squat_status(results, dir) {
+        let status = 'none'
+        if (dir == 'right') {
+          let right_ankle = results.poseLandmarks[27]  //28
+          let right_knee = results.poseLandmarks[25]  //26
+          let right_hip = results.poseLandmarks[23]  //24
+
+          let right_degree = get_degree(right_ankle, right_knee, right_hip)
+
+          if (right_degree > 100) {
+            status = 'up'
+          } else {
+            status = 'down'
+          }
+        return status
+        } else if (dir == 'left') {
+          let left_ankle = results.poseLandmarks[28]
+          let left_knee = results.poseLandmarks[26]
+          let left_hip = results.poseLandmarks[24]
+
+          let left_degree = get_degree(left_ankle, left_knee, left_hip)
+
+          if (left_degree > 100) {
+            status = 'up'
+          } else {
+            status = 'down'
+          }
+          return status
+        }
+        return status
+      }
+
+      if (kind == 'squat') {
+        if (get_squat_ready(results, get_direction(results)) == 'ready') {
+          let status = get_squat_status(results, get_direction(results))
+          if (cur_status != status) {
+            if (status == 'up') {
+              if (cur_status == 'down') {
+                count += 1
+              }
+            }
+            cur_status = status
+          }
+        }
+        // else {
+        //   count = 0
+        // }
+      }
+
+
       // let testvalue = JSON.stringify(results.poseLandmarks[32].z);
-      let testvector = [1,2,3]
-      document.getElementById("counting").innerHTML=[count, kind];
+      // let testvector = [1,2,3]
+      document.getElementById("counting").innerHTML=count;
+      // document.getElementById("counting").innerHTML=[count, kind, get_squat_ready(results, get_direction(results))];
       // document.getElementById("counting").innerHTML=get_pushup_status(results, get_direction(results));
 
       canvasCtx5.restore();
