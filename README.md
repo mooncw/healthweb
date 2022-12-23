@@ -2,16 +2,20 @@
 
 ## 프로젝트 기간: 2022/12/05 ~ 2022/12/23
 
+
 ## 프로젝트 개요
 홈트가 유행하고 있는 지금 시대에 keypoint detection을 활용한 홈트 보조를 위한 웹 서비스를 만들고자 함
+
 
 ## 폴더 및 파일 설명
 django 프로젝트인 health 폴더
 
 웹을 실행하기 위해 필요한 설치 라이브러리들 requirements.txt
 
+
 ## 사용 keypoint detection 모델
 mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
+
 
 ## 진행 과정
 1. 사용하려는 것들을 검토하면서 django 틀을 만들면서 기획
@@ -26,6 +30,7 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 10. 간단한 스쿼트 알고리즘 추가하고 테스트 후 간단한 조정
 11. 부트스트랩을 이용하여 프론트엔드 보충
 
+
 ## 웹설명
 첫 화면에 운동 종류를 선택할 수 있습니다.
 
@@ -37,8 +42,10 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 
 둘 다 올라올 때 카운팅을 합니다.
 
+
 ## 주소(현재 활성화)
 https://myhealthweb.site
+
 
 ## 한계 및 보완점
 1. 더 좋은 서비스를 하려면 운동 종류 늘릴 필요가 있고 필요한 자세 확인이나 카운팅 음성과 같은 필요한 기능이 더 있다고 생각하고 알고리즘 개선도 필요하다고 생각합니다.
