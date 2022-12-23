@@ -85,7 +85,7 @@
           </article>
         </div>
       </div>
-    
+      <button id="reset" class="btn btn-primary" onclick="reset_click();">카운팅 초기화</button>
   </div>
 
   <div class="loading">
@@ -110,6 +110,10 @@
     const kind = document.querySelector('h1').innerText
     var count = 0
     var cur_status = 'none'
+
+    function reset_click() {
+      count = 0
+    }
 
     function zColor(data) {
       const z = clamp(data.from.z + 0.5, 0, 1);

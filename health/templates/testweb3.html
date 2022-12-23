@@ -48,7 +48,7 @@
 
 
   <!-- MEDIAPIPE OUTPUT -->
-  <h1>{{id}}</h1>
+  <h1>pushup</h1>
   <p>카메라에 전신이 나오게 해주세요.</p>
 
   <p>
@@ -66,6 +66,13 @@
   <div id="counting"></div>
 
 
+
+  <p>
+    test value
+  </p>
+  <div id="testvalue"></div>
+
+  <button id="reset" onclick="reset_click();">카운팅 초기화</button>
 
   <div class="loading">
     <div class="spinner"></div>
@@ -89,6 +96,10 @@
     const kind = document.querySelector('h1').innerText
     var count = 0
     var cur_status = 'none'
+
+    function reset_click() {
+      count = 0
+    }
 
     function zColor(data) {
       const z = clamp(data.from.z + 0.5, 0, 1);
@@ -352,6 +363,7 @@
       // let testvalue = JSON.stringify(results.poseLandmarks[32].z);
       // let testvector = [1,2,3]
       document.getElementById("counting").innerHTML = count;
+      document.getElementById("testvalue").innerHTML = [count];
       // document.getElementById("counting").innerHTML=[count, kind, get_squat_ready(results, get_direction(results))];
       // document.getElementById("counting").innerHTML=get_pushup_status(results, get_direction(results));
 
