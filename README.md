@@ -26,7 +26,7 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 7. aws ec2로 1차 배포
 8. 도메인과 https까지 적용 완료
 9. python으론 웹앱에서의 웹캠 서비스가 효과적이지 않은 것 같아 푸쉬업 알고리즘, 모델 사용, 웹캠 사용을 python 대신 js로 사용함
-10. 간단한 스쿼트 알고리즘 추가
+10. 간단한 스쿼트 알고리즘 추가하고 테스트 후 간단한 조정
 11. 부트스트랩을 이용하여 프론트엔드 보충
 
 ### 웹설명
