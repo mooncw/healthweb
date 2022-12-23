@@ -11,3 +11,9 @@ def screen(request, id):
 
 def testweb(request):
     return render(request, 'testweb.html')
+
+def testweb2(request):
+    return render(request, 'testweb2.html')
+
+def testweb3(request):
+    return render(request, 'testweb3.html')
