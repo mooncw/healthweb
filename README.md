@@ -1,4 +1,5 @@
-# healthweb                                                                
+# healthweb
+<img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=Django&logoColor=white"/>
 
 ## 프로젝트 기간: 2022/12/05 ~ 2022/12/23   
 
