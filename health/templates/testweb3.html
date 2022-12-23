@@ -48,7 +48,7 @@
 
 
   <!-- MEDIAPIPE OUTPUT -->
-  <h1>pushup</h1>
+  <h1>squat</h1>
   <p>카메라에 전신이 나오게 해주세요.</p>
 
   <p>
@@ -63,14 +63,14 @@
   <p>
     counting
   </p>
-  <div id="counting"></div>
+  <div id="counting" style="font-size:200px;"></div>
 
 
 
   <p>
     test value
   </p>
-  <div id="testvalue"></div>
+  <div id="testvalue" style="font-size:200px;"></div>
 
   <button id="reset" onclick="reset_click();">카운팅 초기화</button>
 
@@ -330,9 +330,9 @@
           let left_knee = results.poseLandmarks[26]
           let left_hip = results.poseLandmarks[24]
 
-          let left_degree = get_degree(left_ankle, left_knee, left_hip)
+          var left_degree = get_degree(left_ankle, left_knee, left_hip)
 
-          if (left_degree > 100) {
+          if (left_degree > 120) {
             status = 'up'
           } else {
             status = 'down'
@@ -363,7 +363,7 @@
       // let testvalue = JSON.stringify(results.poseLandmarks[32].z);
       // let testvector = [1,2,3]
       document.getElementById("counting").innerHTML = count;
-      document.getElementById("testvalue").innerHTML = [count];
+      document.getElementById("testvalue").innerHTML = [count, left_degree];
       // document.getElementById("counting").innerHTML=[count, kind, get_squat_ready(results, get_direction(results))];
       // document.getElementById("counting").innerHTML=get_pushup_status(results, get_direction(results));
 
