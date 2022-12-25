@@ -58,7 +58,7 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 
 <br>
 
-## 주소(현재 활성화)
+## 주소(현재 중단)
 https://myhealthweb.site
 
 <br>
