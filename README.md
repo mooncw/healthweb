@@ -27,6 +27,7 @@ django 프로젝트인 health 폴더
 
 ## 사용 keypoint detection 모델
 mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
+-keypoint detection을 사용하는 이유는 포즈를 추정하는데 좋기 
 
 <br>
 
