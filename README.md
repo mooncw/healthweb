@@ -16,6 +16,8 @@
 ## 프로젝트 개요
 홈트가 유행하고 있는 지금 시대에 keypoint detection을 활용해서 홈트를 하는데 편의성을 제공하고자 웹 서비스를 만들고자 함
 
+@ 어떤 편의성인지 더 자세히, 시작하게된 동기 있으면 좋음
+
 <br>
 
 ## 폴더 및 파일 설명
@@ -27,7 +29,8 @@ django 프로젝트인 health 폴더
 
 ## 사용 keypoint detection 모델
 mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
--keypoint detection을 사용하는 이유는 포즈를 추정하는데 좋기 
+
+-keypoint detection을 사용하는 이유는 포즈를 추정하는데 좋기 때문
 
 <br>
 
@@ -43,6 +46,8 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 9. python으론 웹앱에서의 웹캠 서비스가 효과적이지 않은 것 같아 푸쉬업 알고리즘, 모델 사용, 웹캠 사용을 python 대신 js로 사용함
 10. 간단한 스쿼트 알고리즘 추가하고 테스트 후 간단한 조정
 11. 부트스트랩을 이용하여 프론트엔드 보충
+
+@ 배포 과정 더 자세히, ETL중 E가 너무 부족함
 
 <br>
 
@@ -72,3 +77,5 @@ https://myhealthweb.site
 5. html을 더 잘 꾸밀 프론트엔드 기술이 필요합니다.
 6. 카메라를 동작시키는데 조금 오래 걸립니다.
 7. etc..
+
+@ 지원하고자하는 직무쪽 내용이 더(?) 필요한 듯함
