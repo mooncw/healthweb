@@ -47,7 +47,7 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 10. 간단한 스쿼트 알고리즘 추가하고 테스트 후 간단한 조정
 11. 부트스트랩을 이용하여 프론트엔드 보충
 
-@ 배포 과정 더 자세히, ETL중 E가 너무 부족함
+@ 배포 과정 더 자세히, ETL 빈약
 
 <br>
 
