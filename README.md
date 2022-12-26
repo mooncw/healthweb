@@ -62,6 +62,8 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 
 둘 다 올라올 때 카운팅을 합니다.
 
+@ 간단해서 이미지로 보여줘도 괜찮을 듯
+
 <br>
 
 ## 주소(현재 중단)
