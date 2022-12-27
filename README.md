@@ -47,7 +47,7 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 10. 간단한 스쿼트 알고리즘 추가하고 테스트 후 간단한 조정
 11. 부트스트랩을 이용하여 프론트엔드 보충
 
-@ 배포 과정 더 자세히, ETL 빈약
+@ 진행 과정 더 자세히, 배포 과정 더 자세히, ETL 빈약
 
 <br>
 
@@ -80,4 +80,4 @@ https://myhealthweb.site
 6. 카메라를 동작시키는데 조금 오래 걸립니다.
 7. etc..
 
-@ 지원하고자하는 직무쪽 내용이 더(?) 필요한 듯함
+@ 지원하고자하는 직무쪽 내용 위주로 필요한 듯함
