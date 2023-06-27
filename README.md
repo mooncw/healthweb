@@ -27,13 +27,6 @@
 
 <br>
 
-## 폴더 및 파일 설명
-django 프로젝트인 health 폴더
-
-웹을 실행하기 위해 필요한 설치 라이브러리들 requirements.txt
-
-<br>
-
 ## 사용 keypoint detection 모델
 mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 
@@ -77,6 +70,13 @@ mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
 
 ## 주소(현재 중단)
 https://myhealthweb.site
+
+<br>
+
+## 폴더 및 파일 설명
+django 프로젝트인 health 폴더
+
+웹을 실행하기 위해 필요한 설치 라이브러리들 requirements.txt
 
 <br>
 
