@@ -73,8 +73,8 @@ https://myhealthweb.site
 <br>
 
 ## 폴더 및 파일 설명
-- django 프로젝트인 health 폴더
-- 웹을 실행하기 위해 필요한 설치 라이브러리들 requirements.txt
+- **health** : django 프로젝트 폴더
+- **requirements.txt** : 설치한 패키지들의 정보가 들어있는 파일
 
 <br>
 
