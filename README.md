@@ -26,7 +26,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 
 ## 사용 keypoint detection 모델
-- mediapipe pose(https://google.github.io/mediapipe/solutions/pose.html)
+- mediapipe pose(https://developers.google.com/mediapipe/solutions/vision/pose_landmarker/)
   - keypoint detection을 사용하는 이유는 포즈를 추정하는데 좋기 때문입니다.
 
 <br>
@@ -36,7 +36,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 - keypoint detection 모델로 정확도가 좋은 mediapipe pose 모델를 선택했습니다.
 - 데이터 탐색 후 보조하고자 하는 운동로 맨몸 운동인 푸쉬업과 스쿼트를 선택했습니다.
 - 유튜브 운동 영상에 mediapipe pose를 적용시켜 알고리즘에 사용할 변수들을 관찰했습니다.
-- 관찰을 통해 방향 확인, 준비 상태 확인, 카운팅 알고리즘을 구현했습니다.
+- 관찰을 통해 각도 계산, 방향 확인, 준비 상태 확인, 카운팅 알고리즘을 구현했습니다.
 - 푸쉬업과 스쿼트 각각 테스트 후 개선이 필요한 부분을 수정했습니다.
 - 깃허브를 통해 AWS EC2로 1차 배포를 완료했습니다.
 - Django는 웹 서버와 직접 통신할 수 없기 때문에 중간다리로 uWSGI라는 python 패키지를 설치하여 Django와 연결했습니다.
