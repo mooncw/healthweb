@@ -25,6 +25,13 @@
     .invisible {
       visibility: hidden
     }
+
+    .hidden {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      visibility: hidden;
+    }
   </style>
 
   <!-- <style>
@@ -59,8 +66,10 @@
   <!-- MEDIAPIPE OUTPUT -->
   <div class="container" style="margin-top: 20px;">
     <div style="padding:15px">
-      <h1 class="pb-2 border-bottom">{{id}}</h1>
-      <p>카메라에 전신이 나오게 해주시고 자신의 옆모습을 보이도록 해주세요.</p>
+      <h2 class="pb-2 border-bottom">{{exercise_data.name_ko}}</h2>
+      <h1 class="hidden">{{id}}</h1>
+      <p>주요 근육 자극 부위 : {{exercise_data.part}}</p>
+      <p>※카메라에 전신이 나오게 해주시고 자신의 {{exercise_data.dir}}모습을 보이도록 해주세요.※</p>
     </div>
 
     

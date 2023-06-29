@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Exercises
 
 def index(request):
     return render(request, 'index.html')
@@ -7,7 +8,8 @@ def index(request):
 #     return render(request, 'testindex.html')
 
 def screen(request, id):
-    return render(request, 'screen.html', {'id': id})
+    exercise_data = Exercises.objects.get(name_en = id)
+    return render(request, 'screen.html', {'id': id, 'exercise_data': exercise_data})
 
 def testweb(request):
     return render(request, 'testweb.html')
