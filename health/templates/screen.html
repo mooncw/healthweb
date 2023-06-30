@@ -68,7 +68,7 @@
   <div class="container" style="margin-top: 20px;">
     <div style="padding:15px">
       <h2 class="pb-2 border-bottom">{{exercise_data.name_ko}}</h2>
-      <h1 class="hidden">{{id}}</h1>
+      <h1 id="name_en">{{exercise_data.name_en}}</h1>
       <p>주요 근육 자극 부위 : {{exercise_data.part}}</p>
       <p>※카메라에 전신이 나오게 해주시고 자신의 {{exercise_data.dir}}모습을 보이도록 해주세요.※</p>
     </div>
@@ -117,12 +117,17 @@
       spinner.style.display = 'none';
     };
 
-    const kind = document.querySelector('h1').innerText
-    var count = 0
-    var cur_status = 'none'
+    const name_en = document.getElementById('name_en');
+    name_en.style.display = 'none'; // H1 태그를 숨김
+    const kind = name_en.innerText; // H1 태그의 텍스트를 변수에 할당
+    // alert(kind); // 변수 값 출력
+
+
+    var count = 0;
+    var cur_status = 'none';
 
     function reset_click() {
-      count = 0
+      count = 0;
     }
 
     function zColor(data) {
@@ -186,32 +191,32 @@
       function get_norm(v1) {
         let result = 0;
         for (let i = 0; i < 3; i++) {
-          result += v1[i] * v1[i]
+          result += v1[i] * v1[i];
         }
         return Math.sqrt(result)
       }
 
       function get_pro_degree(A, B) {
-        let v1 = [A.x - B.x, A.y - B.y, A.z - B.z]
-        let v2 = [A.x - B.x, 0, A.z - B.z]
-        let cosin = get_dot(v1, v2) / (get_norm(v1) * get_norm(v2))
-        let degree = Math.acos(cosin) * 180 / Math.PI
+        let v1 = [A.x - B.x, A.y - B.y, A.z - B.z];
+        let v2 = [A.x - B.x, 0, A.z - B.z];
+        let cosin = get_dot(v1, v2) / (get_norm(v1) * get_norm(v2));
+        let degree = Math.acos(cosin) * 180 / Math.PI;
         return degree
       }
 
       function get_degree(A, B, C) {
-        let v1 = [A.x - B.x, A.y - B.y, A.z - B.z]
-        let v2 = [C.x - B.x, C.y - B.y, C.z - B.z]
-        let cosin = get_dot(v1, v2) / (get_norm(v1) * get_norm(v2))
-        let degree = Math.acos(cosin) * 180 / Math.PI
+        let v1 = [A.x - B.x, A.y - B.y, A.z - B.z];
+        let v2 = [C.x - B.x, C.y - B.y, C.z - B.z];
+        let cosin = get_dot(v1, v2) / (get_norm(v1) * get_norm(v2));
+        let degree = Math.acos(cosin) * 180 / Math.PI;
         return degree
       }
 
 
       // push up
       function get_direction(results) {
-        let left = results.poseLandmarks[12].z
-        let right = results.poseLandmarks[11].z
+        let left = results.poseLandmarks[12].z;
+        let right = results.poseLandmarks[11].z;
         if (left > right) {
           return 'right'
         } else if (right >= left) {
