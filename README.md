@@ -64,9 +64,26 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 <br>
 
+- 홈 화면
+
 <br>
 
+![firstscreen](https://github.com/mooncw/healthweb/assets/97713997/62bdf80c-99c4-437f-a72d-4ba00c7ee850)
+
+<br>
+
+- 선택 후 화면
+
+<br>
+
+![pushup](https://github.com/mooncw/healthweb/assets/97713997/bbb21c92-67f8-45c4-9a87-036d2e86a0a7)
+
+<br>
+
+
 ## 웹 시연 영상
+
+https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38bab7707a30
 
 <br>
 
