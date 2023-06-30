@@ -106,6 +106,7 @@ https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38ba
 - 웹캠 화면에 keypoint detection 모델을 적용시켰습니다.
 - 제가 만든 웹앱을 배포해보았습니다.
 - keypoint detection 모델을 적용시킨 웹캠 화면의 심한 프레임 드랍을 개선했습니다.
+- 데이터가 2개뿐이지만 Django에서 DB를 이용해봤습니다.
 
 <br>
 
