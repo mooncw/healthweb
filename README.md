@@ -73,9 +73,9 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 ## 주소
 - http://myhealthweb.site
 - 웹캠 기능은 다음 과정을 거친 후 사용가능합니다.
-    1. 크롬 주소창에 chrome://flags을 입력합니다.
-    2. 상단 search 입력란에 Insecure origins treated as secure을 입력합니다.
-    3. Insecure origins treated as secure 아래에 `http://myhealthweb.site`을 입력하고 Disabled를 Enabled로 바꿔줍니다.
+  - 크롬 주소창에 chrome://flags을 입력합니다.
+  - 상단 search 입력란에 Insecure origins treated as secure을 입력합니다.
+  - Insecure origins treated as secure 아래에 `http://myhealthweb.site`을 입력하고 Disabled를 Enabled로 바꿔줍니다.
 
 <br>
 
