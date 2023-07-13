@@ -87,7 +87,7 @@ https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38ba
 
 <br>
 
-## 주소 (2023.07.07 이후 중단 예정)
+## 주소 (2023.07.31 이후 중단 예정)
 - http://myhealthweb.site
 - 웹캠 기능은 다음 과정을 거친 후 사용가능합니다.
   - 크롬 주소창에 chrome://flags을 입력합니다.
