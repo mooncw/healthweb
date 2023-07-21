@@ -32,6 +32,85 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 
 ## 진행 과정
+### 1. Django, HTML 틀 구성
+* 아나콘다 가상환경에서 Django를 설치 후 healthweb 폴더에 Django 프로젝트와 앱 생성
+
+<img src="https://github.com/mooncw/healthweb/assets/97713997/99b1b983-8484-4cf0-85a8-d4fdae639dfc" width="20%" height="20%">
+
+<br>
+<br>
+
+* 사용할 HTML 틀 구성
+
+<img src="https://github.com/mooncw/healthweb/assets/97713997/60cba97c-dbde-475e-9dda-15d55ad283d5" width="15%" height="15%">
+
+<br>
+<br>
+
+### 2. db.sqlite3 테이블 생성 & Django model 추가
+* sqlite로 보조할 운동에 대한 데이터가 들어있는 DB를 구축
+  - DBeaver을 사용하여 테이블을 만들고 현재 쓸 데이터만 넣었습니다.
+
+<img src="https://github.com/mooncw/healthweb/assets/97713997/f5f261a6-7e6f-4177-8743-304f3d4cb9c4" width="35%" height="35%">
+
+<br>
+
+* Django의 models.py
+
+<img src="https://github.com/mooncw/healthweb/assets/97713997/73a1be89-fcf1-4536-9f91-a9e40b78051f" width="40%" height="40%">
+
+<br>
+<br>
+
+
+### 3. Django 틀에 내용 추가
+* urls.py
+  - url과 view를 매칭시키는 역할을 합니다.
+
+<img src="https://github.com/mooncw/healthweb/assets/97713997/7b1e66c0-f9fa-4c03-902f-6c34eb7f66a3" width="47%" height="47%">
+
+<br>
+
+* views.py
+  - 사용자의 요청을 받아 처리하고, url에서 얻은 id 값에 매칭되는 데이터를 Exercises에서 가져와 html에 전달하고 처리 결과를 반환하는 역할을 합니다.
+ 
+<img src="https://github.com/mooncw/healthweb/assets/97713997/a33b3719-83b5-4847-b08b-f0d7847908b5" width="62%" height="62%">
+
+<br>
+<br>
+
+
+### 4. Keypoint Detection 모델 선택
+* 첫 번째 선택한 Openpose 모델 성능 테스트한 결과
+  - 탐지 정확도도 좀 떨어지고
+  - pose를 파악하기 위한 keypoint 개수도 적은 편이기 때문에
+  - 운동 보조를 위한 keypoint detection 모델에는 적합하지않다고 판단했습니다.
+
+* 두 번째 선택한 mediapipe pose 모델 성능 테스트한 결과
+  - openpose보다 탐지가 훨씬 정확하고
+  - keypoint 개수도 많은 편이고
+  - keypoint마다 카메라와 신체 사이의 거리를 출력해주고
+  - 어떤 keypoint가 카메라에 보이는 상태인지 안보이는 상태인지 출력해주기 때문에
+  - 운동 보조를 위한 keypoint detection 모델로 적합하다고 판단해서 선택했습니다.
+
+* Mediapipe pose 모델 관련 링크(https://developers.google.com/mediapipe/solutions/vision/pose_landmarker/)
+
+### 5. HTML 내용 추가
+* index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - 우선 django와 html 틀을 만들고 살을 붙이는 방향으로 진행했습니다.
 - keypoint detection 모델로 정확도가 좋은 mediapipe pose 모델를 선택했습니다.
 - 데이터 탐색 후 보조하고자 하는 운동로 맨몸 운동인 푸쉬업과 스쿼트를 선택했습니다.
