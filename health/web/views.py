@@ -4,12 +4,9 @@ from .models import Exercises
 def index(request):
     return render(request, 'index.html')
 
-# def testindex(request):
-#     return render(request, 'testindex.html')
-
 def screen(request, id):
     exercise_data = Exercises.objects.get(name_en = id)
-    return render(request, 'screen.html', {'id': id, 'exercise_data': exercise_data})
+    return render(request, 'screen.html', {'exercise_data': exercise_data})
 
 def testweb(request):
     return render(request, 'testweb.html')
