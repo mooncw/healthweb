@@ -1,5 +1,5 @@
 # healthweb
-keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (2022/12/05 ~ 2022/12/23)
+keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (2022/12/05 ~ 2022/12/23, 2023/08/23 ~)
 
 <br>
 
@@ -48,16 +48,16 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 
 ### 2. db.sqlite3 테이블 생성 & Django model 추가
-* sqlite로 보조할 운동에 대한 데이터가 들어있는 DB를 구축
-  - DBeaver을 사용하여 테이블을 만들고 현재 쓸 데이터만 넣었습니다.
+* 보조할 운동에 대한 데이터가 들어있는 MySQL RDB를 구축
+  - Django shell을 이용하여 현재 쓸 데이터만 넣었습니다.
 
-<img src="https://github.com/mooncw/healthweb/assets/97713997/f5f261a6-7e6f-4177-8743-304f3d4cb9c4" width="35%" height="35%">
+<img src="https://github.com/mooncw/healthweb/assets/97713997/2198e50c-57ea-4f0d-9767-d76595e6a379" width="35%" height="35%">
 
 <br>
 
 * Django의 models.py
 
-<img src="https://github.com/mooncw/healthweb/assets/97713997/73a1be89-fcf1-4536-9f91-a9e40b78051f" width="40%" height="40%">
+<img src="https://github.com/mooncw/healthweb/assets/97713997/6ae675cd-df81-4ac0-ac2d-51d1aca300c7" width="40%" height="40%">
 
 <br>
 <br>
