@@ -199,7 +199,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 ## 2022/12/23 최종 배포 후 추가 개선
 * 서버가 1코어 1기가램이라 Django에서 mediapipe pose 모델을 적용시킨 웹캠이 프레임 드랍이 심해서 카운팅을 위한 알고리즘, 모델 사용을 CSR로 처리하여 개선
 * sqlite3에서 mysql로 DB 교체
-* html 구조 개선
+* block 기능을 이용하여 html 구조 개선
 
 <br>
 
