@@ -4,20 +4,18 @@ from .models import Exercises
 # from django.contrib.auth.decorators import login_required
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'web/index.html')
+
+# def index2(request):
+#     return render(request, 'web/index2.html')
 
 def screen(request, id):
     exercise_data = Exercises.objects.get(name_en = id)
-    return render(request, 'screen.html', {'exercise_data': exercise_data})
+    return render(request, 'web/screen.html', {'exercise_data': exercise_data})
 
-def testweb(request):
-    return render(request, 'testweb.html')
-
-def testweb2(request):
-    return render(request, 'testweb2.html')
-
-def testweb3(request):
-    return render(request, 'testweb3.html')
+# def screen2(request, id):
+#     exercise_data = Exercises.objects.get(name_en = id)
+#     return render(request, 'web/screen2.html', {'exercise_data': exercise_data})
 
 # User1 = get_user_model()
 

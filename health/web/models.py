@@ -9,9 +9,9 @@ class Exercises(models.Model):
     dir = models.CharField(max_length=20)
     part = models.CharField(max_length=50)
 
-    # class Meta:
-    #     managed = True
-        # db_table = 'exercises'
+    def __str__(self):
+        return self.name_ko
+
 
 # # accounts/models.py
 

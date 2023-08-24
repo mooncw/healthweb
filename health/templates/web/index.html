@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'simbol.html' %}
+<div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">맨몸 운동</h2>
+    <p>맨몸 운동은 남녀노소 언제, 어디서든 할 수 있는 운동입니다.</p>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+            <div
+                class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#toggles2" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="fs-2">푸쉬업</h3>
+                <p>맨몸 운동에서 대표적인 가슴 운동은 푸시업입니다.<br>푸쉬업은 주요 타깃이 가슴이지만 다른 많은 근육을 사용하기 때문에 몸 전반에 걸친 건강을 향상시킬 수 있습니다.</p>
+                <a href="/screen/pushup" class="btn btn-primary">
+                    Let's Go
+                </a>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div
+                class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#cpu-fill" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="fs-2">스쿼트</h3>
+                <p>맨몸 운동에서 대표적인 하체 운동은 스쿼트입니다.<br>하체 근육이 커지면 기초대사량이 많이 증가하기 때문에 다이어트에 도움이 되고 체형을 교정할 수 있는 효과도 있습니다.
+                </p>
+                <a href="/screen/squat" class="btn btn-primary">
+                    Let's Go
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
