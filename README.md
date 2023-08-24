@@ -42,7 +42,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 * 사용할 HTML 틀 구성
 
-<img src="https://github.com/mooncw/healthweb/assets/97713997/60cba97c-dbde-475e-9dda-15d55ad283d5" width="15%" height="15%">
+<img src="https://github.com/mooncw/healthweb/assets/97713997/0e1d6b78-8b90-42fe-aaeb-f1ed2399f19f" width="18%" height="18%">
 
 <br>
 <br>
