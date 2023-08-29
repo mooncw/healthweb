@@ -42,7 +42,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 * 사용할 HTML 틀 구성
 
-<img src="https://github.com/mooncw/healthweb/assets/97713997/60cba97c-dbde-475e-9dda-15d55ad283d5" width="15%" height="15%">
+<img src="https://github.com/mooncw/healthweb/assets/97713997/0e1d6b78-8b90-42fe-aaeb-f1ed2399f19f" width="18%" height="18%">
 
 <br>
 <br>
@@ -199,6 +199,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 ## 2022/12/23 최종 배포 후 추가 개선
 * 서버가 1코어 1기가램이라 Django에서 mediapipe pose 모델을 적용시킨 웹캠이 프레임 드랍이 심해서 카운팅을 위한 알고리즘, 모델 사용을 CSR로 처리하여 개선
 * sqlite3에서 mysql로 DB 교체
+* block 기능을 이용하여 html 구조 개선
 
 <br>
 
