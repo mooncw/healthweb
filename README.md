@@ -31,19 +31,19 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 
 ## 진행 과정
-### 1. Django, HTML 틀 구성
-* 아나콘다 가상환경에서 Django를 설치 후 healthweb 폴더에 Django 프로젝트와 앱 생성
+### 1. Django 프로젝트와 앱 구성
+<ul>
+  <li>아나콘다 가상환경에서 Django를 설치 후 healthweb 폴더에 Django 프로젝트 'health'와 앱 'web', 'board', 'common' 생성</li>
+</ul>
+<div>
+  <img src="https://github.com/mooncw/healthweb/assets/97713997/9a028e29-4d6a-4a41-88bc-e9de3a04590b" width="20%" height="20%">
+</div>
+<ul>
+  <li><strong>web:</strong> 운동 선택 후 운동 과정을 위한 앱</li>
+  <li><strong>board:</strong> 게시판 기능을 위한 앱</li>
+  <li><strong>common:</strong> 로그인, 로그아웃, 회원가입 기능을 위한 앱</li>
+</ul>
 
-<img src="https://github.com/mooncw/healthweb/assets/97713997/99b1b983-8484-4cf0-85a8-d4fdae639dfc" width="20%" height="20%">
-
-<br>
-<br>
-
-* 사용할 HTML 틀 구성
-
-<img src="https://github.com/mooncw/healthweb/assets/97713997/0e1d6b78-8b90-42fe-aaeb-f1ed2399f19f" width="18%" height="18%">
-
-<br>
 <br>
 
 ### 2. MySQL 테이블 생성 & Django model 추가
@@ -62,7 +62,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 
 
-### 3. Django 틀에 내용 추가
+### 3. web앱에 내용 추가
 * urls.py
   - url과 view를 매칭시키는 역할을 합니다.
 
@@ -97,17 +97,12 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 <br>
 
-### 5. HTML 내용 추가
-**1) index.html(홈 화면)**
+### 5. web앱 HTML
+**1) 홈 화면(운동 선택 화면)**
 
 <img src="https://github.com/mooncw/healthweb/assets/97713997/62bdf80c-99c4-437f-a72d-4ba00c7ee850" width="62%" height="62%">
 
 * bootstrap을 이용하여 간단한 프론트엔드 구성
-<img src="https://github.com/mooncw/healthweb/assets/97713997/387a8804-5b26-4233-b8f3-2a5dc048af61" width="72%" height="72%">
-
-<br>
-<br>
-
 * Let’s Go 버튼 누를 시 이동할 url 형식
 <img src="https://github.com/mooncw/healthweb/assets/97713997/7aed24ad-871a-41ed-8a32-4c195f998b32" width="40%" height="40%">
 
@@ -115,7 +110,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 <br>
 
-**2) screen.html(운동 선택 후 화면)**
+**2) 운동 선택 후 화면**
 
 <img src="https://github.com/mooncw/healthweb/assets/97713997/bbb21c92-67f8-45c4-9a87-036d2e86a0a7" width="62%" height="62%">
 
@@ -124,6 +119,13 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 * views.py에서 넘어온 exercise_data 이용
 <img src="https://github.com/mooncw/healthweb/assets/97713997/79064530-9307-4e42-8d2a-be9f99702e13" width="69%" height="69%">
+
+<br>
+<br>
+
+* mediapipe pose와 관련된 외부 라이브러리를 가져온 후 모델을 적용시키는 코드를 가져오고 카운팅 알고리즘을 추가한 mediapipe.js 파일을 로드
+<img src="https://github.com/mooncw/healthweb/assets/97713997/d2ada488-66d4-4c8b-8e75-87ba089613f3" width="83%" height="83%">
+<img src="https://github.com/mooncw/healthweb/assets/97713997/a881a65d-248e-47fe-9b37-5b5c50907eb0" width="40%" height="40%">
 
 <br>
 <br>
@@ -176,13 +178,45 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 <br>
 
-### 7. 게시판 & 로그인, 회원가입 기능 추가
-<img src="https://github.com/mooncw/healthweb/assets/97713997/baab57b0-db8f-4572-9c8f-1ad899c5fdfc" width="100%" height="100%">
+### 7. board 앱 HTML
+**1) 일반 화면**
+<img src="https://github.com/mooncw/healthweb/assets/97713997/baab57b0-db8f-4572-9c8f-1ad899c5fdfc" width="90%" height="90%">
 
 <br>
 <br>
 
-### 8. 배포
+**2) 글 클릭 후 화면**
+<img src="https://github.com/mooncw/healthweb/assets/97713997/aab7737d-7b50-4245-95ad-fa3cbb72367f" width="90%" height="90%">
+
+<br>
+<br>
+
+**3) 질문 등록 화면**
+<img src="https://github.com/mooncw/healthweb/assets/97713997/3bb04293-1d68-4227-b1fa-1518bf60dda5" width="90%" height="90%">
+
+<br>
+<br>
+
+**4) 검색 후 화면**
+<img src="https://github.com/mooncw/healthweb/assets/97713997/ec6a3261-67e0-4245-827b-52d19b895dd2" width="90%" height="90%">
+
+<br>
+<br>
+
+### 8. common 앱 HTML
+* 로그인 화면
+<img src="https://github.com/mooncw/healthweb/assets/97713997/0a2e4f91-7aab-463b-b89f-b6cb14320426" width="90%" height="90%">
+
+<br>
+<br>
+
+* 로그아웃 화면
+<img src="https://github.com/mooncw/healthweb/assets/97713997/d9d45f0e-3c8b-4df6-bf64-3ce7e1a843b5" width="90%" height="90%">
+
+<br>
+<br>
+
+### 9. 배포
 * 로컬에서 만든 것을 깃허브에 올리고 AWS EC2에서 git clone하여 1차 배포했습니다.
 * Django는 웹서버와 직접 통신할 수 없기 때문에 중간다리로 uWSGI python 패키지를 설치하여 Django와 연결했습니다.
 * 웹서버 애플리케이션인 nginx를 설치하여 uWSGI와 연결했습니다.
@@ -206,6 +240,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 * sqlite3에서 mysql로 DB 교체
 * block 기능을 이용하여 html 구조 개선
 * 커뮤니티를 위한 게시판 추가
+* 장고 내장 모델 user을 이용한 로그인, 로그아웃, 회원가입 기능 구현
 
 <br>
 
@@ -229,10 +264,12 @@ https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38ba
 - 제가 만든 웹앱을 배포해보았습니다.
 - keypoint detection 모델을 적용시킨 웹캠 화면의 심한 프레임 드랍을 SSR에서 CSR로 바꿔서 개선했습니다.
 - 데이터가 2개뿐이지만 Django에서 DB를 이용해봤습니다.
+- 미흡하지만 의사소통을 위한 게시판을 만들어 봤습니다.
 
 <br>
 
 ## 개선사항
-- 더 좋은 서비스를 하려면 운동 종류 늘릴 필요가 있고 자세 확인, 카운팅 음성, 알림 등과 같은 추가적인 기능이 필요하다고 생각합니다.
+- 더 좋은 서비스를 하려면 운동 종류 늘릴 필요가 있고 앞서 언급한 편의성에 대한 기능이 필요하다고 생각합니다.
 - 좀 더 정확한 카운팅 알고리즘이 필요하다고 생각합니다.
 - https를 적용한다면 웹캠 기능을 사용하기 위한 번거로운 작업을 할 필요가 없어질 것이라 생각합니다.
+- 실서비스에서는 추후 개선을 위해 사용자 행동에 대한 로그 기능이 있으면 좋을 것 같습니다.
