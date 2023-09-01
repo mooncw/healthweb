@@ -39,7 +39,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
   <img src="https://github.com/mooncw/healthweb/assets/97713997/9a028e29-4d6a-4a41-88bc-e9de3a04590b" width="20%" height="20%">
 </div>
 <ul>
-  <li><strong>web:</strong> 운동 선택 후 운동 과정을 위한 앱</li>
+  <li><strong>web:</strong> 운동 선택, 선택 후 운동 보조 기능을 위한 앱</li>
   <li><strong>board:</strong> 게시판 기능을 위한 앱</li>
   <li><strong>common:</strong> 로그인, 로그아웃, 회원가입 기능을 위한 앱</li>
 </ul>
