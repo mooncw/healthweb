@@ -264,7 +264,7 @@ https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38ba
 - 제가 만든 웹앱을 배포해보았습니다.
 - keypoint detection 모델을 적용시킨 웹캠 화면의 심한 프레임 드랍을 SSR에서 CSR로 바꿔서 개선했습니다.
 - 데이터가 2개뿐이지만 Django에서 DB를 이용해봤습니다.
-- 미흡하지만 의사소통을 위한 게시판을 만들어 봤습니다.
+- 미흡하지만 커뮤니케이션을 위한 게시판을 만들어 봤습니다.
 
 <br>
 
