@@ -177,8 +177,8 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 <br>
 
-### 7. 게시판 추가
-<img src="https://github.com/mooncw/healthweb/assets/97713997/a4b34269-d7f3-4ff1-aae7-7012d38928ff" width="100%" height="100%">
+### 7. 게시판 & 로그인, 회원가입 기능 추가
+<img src="https://github.com/mooncw/healthweb/assets/97713997/baab57b0-db8f-4572-9c8f-1ad899c5fdfc" width="100%" height="100%">
 
 <br>
 <br>
@@ -189,7 +189,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 * 웹서버 애플리케이션인 nginx를 설치하여 uWSGI와 연결했습니다.
 * uwsgi.service 파일을 만들어 uWSGI를 백그라운드에서 실행이 되도록하여 2차 배포했습니다.
 * 가비아에서 도메인을 구입하고 AWS Route 53을 통해 구매한 도메인과 EC2 인스턴스을 연결하여 최종 배포했습니다.
-* 이 후, 개선한 부분이 있을 때마다 재배포했습니다.
+* 이 후, 개선한 부분이 있을 때마다 github에 재배포했습니다.
 
 <br>
 
@@ -210,7 +210,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 <br>
 
-## 웹 시연 영상
+## 웹 시연 영상(운동 선택 후 운동 카운팅 영상)
 
 https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38bab7707a30
 
@@ -237,4 +237,3 @@ https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38ba
 - 더 좋은 서비스를 하려면 운동 종류 늘릴 필요가 있고 자세 확인, 카운팅 음성, 알림 등과 같은 추가적인 기능이 필요하다고 생각합니다.
 - 좀 더 정확한 카운팅 알고리즘이 필요하다고 생각합니다.
 - https를 적용한다면 웹캠 기능을 사용하기 위한 번거로운 작업을 할 필요가 없어질 것이라 생각합니다.
-- 게시판에서 본인이 올린 질문이나 답변만의 수정 및 삭제를 위해 로그인/로그아웃 기능이 필요합니다.
