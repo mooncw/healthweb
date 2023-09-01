@@ -30,7 +30,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 <br>
 
-## 진행 과정
+## 진행 사항
 ### 1. Django 프로젝트와 앱 구성
 <ul>
   <li>아나콘다 가상환경에서 Django를 설치 후 healthweb 폴더에 Django 프로젝트 'health'와 앱 'web', 'board', 'common' 생성</li>
