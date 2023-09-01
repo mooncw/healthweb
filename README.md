@@ -47,7 +47,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 <br>
 
-### 2. db.sqlite3 테이블 생성 & Django model 추가
+### 2. MySQL 테이블 생성 & Django model 추가
 * 보조할 운동에 대한 데이터가 들어있는 MySQL RDB를 구축
   - Django shell을 이용하여 현재 쓸 데이터만 넣었습니다.
 
@@ -177,7 +177,13 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 <br>
 
-### 7. 배포
+### 7. 게시판 추가
+<img src="https://github.com/mooncw/healthweb/assets/97713997/a4b34269-d7f3-4ff1-aae7-7012d38928ff" width="100%" height="100%">
+
+<br>
+<br>
+
+### 8. 배포
 * 로컬에서 만든 것을 깃허브에 올리고 AWS EC2에서 git clone하여 1차 배포했습니다.
 * Django는 웹서버와 직접 통신할 수 없기 때문에 중간다리로 uWSGI python 패키지를 설치하여 Django와 연결했습니다.
 * 웹서버 애플리케이션인 nginx를 설치하여 uWSGI와 연결했습니다.
@@ -200,6 +206,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 * 서버가 1코어 1기가램이라 Django에서 mediapipe pose 모델을 적용시킨 웹캠이 프레임 드랍이 심해서 카운팅을 위한 알고리즘, 모델 사용을 CSR로 처리하여 개선
 * sqlite3에서 mysql로 DB 교체
 * block 기능을 이용하여 html 구조 개선
+* 커뮤니티를 위한 게시판 추가
 
 <br>
 
@@ -229,5 +236,5 @@ https://github.com/mooncw/healthweb/assets/97713997/faa69803-df4e-4c58-afde-38ba
 ## 개선사항
 - 더 좋은 서비스를 하려면 운동 종류 늘릴 필요가 있고 자세 확인, 카운팅 음성, 알림 등과 같은 추가적인 기능이 필요하다고 생각합니다.
 - 좀 더 정확한 카운팅 알고리즘이 필요하다고 생각합니다.
-- sqlite는 단일 스레드로 동작하기 때문에 병렬 처리가 힘들어서 사용자가 많아지면 sqlite보다 mysql같은 것을 써야한다고 생각합니다.
 - https를 적용한다면 웹캠 기능을 사용하기 위한 번거로운 작업을 할 필요가 없어질 것이라 생각합니다.
+- 게시판에서 본인이 올린 질문이나 답변만의 수정 및 삭제를 위해 로그인/로그아웃 기능이 필요합니다.
