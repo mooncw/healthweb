@@ -62,10 +62,6 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
     <li><strong>board:</strong> 게시판 기능을 위한 앱</li>
     <li><strong>common:</strong> 로그인, 로그아웃, 회원가입 기능을 위한 앱</li>
   </ul>
-  <br>
-  <div>
-    <img src="https://github.com/mooncw/healthweb/assets/97713997/9a028e29-4d6a-4a41-88bc-e9de3a04590b" width="22%" height="22%">
-  </div>
 </ul>
 <ul>
   <li>'health' 프로젝트 settings.py의 DATABASES</li>
@@ -84,7 +80,12 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <ul>
   <li>Models.py</li>
   <ul>
-    <li>django shell을 이용하여 임시로 사용할 2개의 데이터를 입력</li>
+    <li>Exercises</li>
+    <ul>
+      <li>보조할 운동에 대한 정보를 넣기 위한 모델</li>
+      <li>id, 한글 이름, 영어 이름, 카메라 방향, 자극 부위에 대한 정보가 들어갑니다.</li>
+      <li>django shell을 이용하여 임시로 사용할 2개의 데이터를 입력했습니다.</li>
+    </ul>
   </ul>
   <br>
   <div>
@@ -110,7 +111,8 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <ul>
   <li>Views.py</li>
   <ul>
-    <li>사용자의 요청을 받아 처리하고, url에서 얻은 id 값에 매칭되는 데이터를 Exercises에서 가져와 html에 전달하고 처리 결과를 반환하는 역할을 합니다.</li>
+    <li>사용자의 요청을 받아 처리합니다.</li>
+    <li>url에서 얻은 id 값에 매칭되는 데이터를 Exercises에서 가져와 html에 전달하고 처리 결과를 반환합니다.</li>
   </ul>
   <br>
   <div>
@@ -126,7 +128,6 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       <img src="https://github.com/mooncw/healthweb/assets/97713997/62bdf80c-99c4-437f-a72d-4ba00c7ee850" width="68%" height="68%">
     </div>
     <ul>
-      <li>bootstrap을 이용하여 간단한 프론트엔드 구성</li>
       <li>Let’s Go 버튼 누를 시 이동할 url 형식</li>
       <br>
       <div>
@@ -159,6 +160,203 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 <br>
 
 ### 4. Board 앱
+<ul>
+  <li>Models.py</li>
+  <ul>
+    <li>Question</li>
+    <ul>
+      <li>게시판에 등록되는 질문에 대한 정보를 위한 모델</li>
+      <li>작성자, 질문 제목, 질문 내용, 수정 날짜, 등록 날짜, 추천에 대한 정보가 들어갑니다.</li>
+      <li>작성자와 추천자는 장고 내장 모델인 User과 테이블 관계를 가집니다.</li>
+      <ul>
+        <li><strong>User:작성자</strong> -> 일대다</li>
+        <li><strong>User:추천자</strong> -> 다대다</li>
+      </ul>
+      <li>작성자 계정 삭제되면 해당 작성자가 작성한 질문도 삭제되도록 했습니다.</li>
+    </ul>
+    <br>
+    <div>
+      <img src="https://github.com/mooncw/healthweb/assets/97713997/2908e2f9-5ae2-4fde-9747-cb277ba79d8a" width="55%" height="55%">
+    </div>
+  </ul>
+  <br>
+  <ul>
+    <li>Answer</li>
+    <ul>
+      <li>질문에 등록되는 답변에 대한 정보를 위한 모델</li>
+      <li>작성자, 답변하는 질문, 답변 내용, 수정 날짜, 등록 날짜, 추천에 대한 정보가 들어갑니다.</li>
+      <li>답변하는 질문은 Question 모델과 테이블 관계를 가집니다.</li>
+      <ul>
+        <li><strong>질문:답변</strong> -> 일대다</li>
+      </ul>
+      <li>질문이 삭제되면 해당 질문에 대한 답변도 삭제되도록 했습니다.</li>
+      <li>작성자와 추천자는 장고 내장 모델인 User과 테이블 관계를 가집니다.</li>
+      <ul>
+        <li><strong>작성자:User</strong> -> 일대다</li>
+        <li><strong>추천자:User</strong> -> 다대다</li>
+      </ul>
+      <li>작성자 계정 삭제되면 해당 작성자가 작성한 질문도 삭제되도록 했습니다.</li>
+    </ul>
+    <br>
+    <div>
+      <img src="https://github.com/mooncw/healthweb/assets/97713997/6352adfe-8d96-4bcd-97dc-3428b45b4259" width="55%" height="55%">
+    </div>
+  </ul>  
+</ul>
+
+<ul>
+  <li>Urls.py</li>
+  <ul>
+    <li>url과 view를 매칭시키는 역할을 합니다.</li>
+  </ul>
+  <br>
+  <div>
+    <img src="https://github.com/mooncw/healthweb/assets/97713997/2f939e3a-074a-4f13-9514-9569c963638d" width="55%" height="55%">
+  </div>
+</ul>
+
+<ul>
+  <li>Views</li>
+  <ul>
+    <li>사용자의 요청을 받아 처리합니다.</li>
+    <li>Base_views.py</li>
+    <ul>
+      <li>index</li>
+      <ul>
+        <li>질문 목록을 위한 뷰함수입니다.</li>
+        <li>GET 방식으로 동작하여 page는 기본값으로 1, kw는 기본값으로 ''을 넣습니다.</li>
+        <li>question_list는 create_date를 기준으로 내림차순 즉 최신 글이 먼저 보이게끔 했습니다.</li>
+        <li>장고 내장 모듈인 Q를 이용하여 질문 제목, 질문 내용, 답변 내용, 질문 작성자, 답변 작성자에 kw이 포함되는 question_list를 가져오도록 해서 검색 기능을 구현했습니다.</li>
+        <li>장고 Paginator을 이용하여 한 페이지 당 10개의 질문 목록을 보여지게 했습니다.</li>
+        <li>페이지, 해당 페이지의 질문 목록들, 검색 키워드 데이터를 각각 page, page_obj, kw에 담고 질문 목록 화면에 전달합니다.</li>
+      </ul>
+      <br>
+      <div>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/02997f9b-a050-468e-854d-03e2eaa582c8" width="55%" height="55%">
+      </div>
+      <br>
+      <li>detail</li>
+      <ul>
+        <li>질문 클릭 후 질문 상세 화면을 위한 뷰함수입니다.</li>
+        <li>GET 방식으로 동작합니다.</li>
+        <li>question_id에 해당하는 질문 데이터를 question에 담고 질문 클릭 후 화면에 전달합니다.</li>
+      </ul>
+      <br>
+      <div>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/2dcc1249-f728-4499-953b-189aeb9caac9" width="55%" height="55%">
+      </div>
+    </ul>
+    <br>
+    <li>Question_views.py</li>
+    <ul>
+      <li>장고의 login_required 데코레이터를 이용하여 질문 등록, 질문 수정, 질문 삭제, 질문 추천은 로그인이 필요하도록 했습니다.</li>
+      <li>question_create</li>
+      <ul>
+        <li>질문 목록 화면에서 질문 등록을 위한 뷰함수입니다.</li>
+        <li>GET 방식으로 동작하면 질문 폼을 보여줍니다.</li>
+        <li>POST 방식으로 동작하면 폼의 내용(질문 제목, 내용)과 함께 요청자는 작성자, 현재시간은 등록시간에 넣어 Question 모델에 저장한 후 질문 목록 화면으로 이동합니다. </li>
+      </ul>
+      <br>
+      <div>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/43682ffa-f33b-4e43-93a3-51fcf776a083" width="55%" height="55%">
+      </div>
+      <br>
+      <li>question_modify</li>
+      <ul>
+        <li>질문 상세 화면에서 질문 수정을 위한 뷰함수입니다.</li>
+        <li>question_id에 해당하는 질문 데이터를 question에 담습니다.</li>
+        <li>해당 질문의 작성자와 요청자가 다를 경우 에러 메세지를 발생시켜 해당 질문 상세 화면에 보냅니다.</li>
+        <li>GET 방식으로 동작하면 질문 폼을 보여줍니다.</li>
+        <li>POST 방식으로 동작하면 폼의 내용(질문 제목, 내용)과 함께 현재시간은 수정시간에 넣어 수정한 후 해당 질문 상세 화면으로 이동합니다.</li>
+      </ul>
+      <br>
+      <div>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/f47f09e1-12f3-4f2b-a288-2ca82f585da1" width="55%" height="55%">
+      </div>
+      <br>
+      <li>question_delete</li>
+      <ul>
+        <li>질문 상세 화면에서 질문 삭제를 위한 뷰함수입니다.</li>
+        <li>question_id에 해당하는 질문 데이터를 question에 담습니다.</li>
+        <li>해당 질문의 작성자와 요청자가 다를 경우 에러 메세지를 발생시켜 해당 질문 상세 화면에 보냅니다.</li>
+        <li>question을 삭제한 후 질문 목록 화면으로 이동합니다.</li>
+      </ul>
+      <br>
+      <div>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/96e8ff64-e9c8-4087-8cdd-3c8d466d8b62" width="55%" height="55%">
+      </div>
+      <br>
+      <li>question_vote</li>
+      <ul>
+        <li>질문 상세 화면에서 질문 추천을 위한 뷰함수입니다.</li>
+        <li>question_id에 해당하는 질문 데이터를 question에 담습니다.</li>
+        <li>해당 질문의 작성자와 요청자가 같을 경우 에러 메세지를 발생시켜 해당 질문 상세 화면에 보냅니다.</li>
+        <li>해당 질문의 추천자에 요청자를 추가한 후 질문 상세 화면으로 이동합니다.</li>
+      </ul>
+      <br>
+      <div>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/166f96ce-eb42-4389-b995-86d1ff038117" width="55%" height="55%">
+      </div>
+    </ul>
+    <br>
+    <li>answer_views.py</li>
+    <ul>
+      <li>답변 등록, 답변 수정, 답변 삭제, 답변 추천은 로그인이 필요하도록 했습니다.</li>
+      <li>answer_create</li>
+      <ul>
+        <li>질문 상세 화면에서 답변 등록을 위한 뷰함수입니다.</li>
+        <li>question_id에 해당하는 질문 데이터를 question에 담습니다.</li>
+        <li>GET 방식으로 동작하면 답변 폼을 보여줍니다.</li>
+        <li>POST 방식으로 동작하면 폼의 내용(답변 내용)을 포함하여 요청자는 작성자, 현재시간은 등록시간, 해당 질문은 답변하는 질문에 넣어 Answer 모델에 저장한 후 해당 질문 상세 화면으로 이동합니다.</li>
+        <li>답변 등록 후 앵커 태그를 이용하여 스크롤이 등록한 답변으로 이동합니다.</li>
+      </ul>
+      <br>
+      <dir>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/798fd23d-a3d8-46f8-aafc-d34caa2b4c8d" width="55%" height="55%">
+      </dir>
+      <br>
+      <li>answer_modify</li>
+      <ul>
+        <li>질문 상세 화면에서 답변 수정을 위한 뷰함수입니다.</li>
+        <li>answer_id에 해당하는 답변 데이터를 answer에 담습니다.</li>
+        <li>해당 답변의 작성자와 요청자가 다를 경우 에러 메세지를 발생시켜 해당 답변이 있는 질문 상세 화면으로 보냅니다. 
+        <li>GET 방식으로 동작하면 답변 폼을 보여줍니다.</li>
+        <li>POST 방식으로 동작하면 폼의 내용(답변 내용)을 포함하여 현재시간은 수정시간에 넣어 수정한 후 해당 답변이 있는 질문 상세 화면으로 이동합니다.</li>
+        <li>답변 수정 후 앵커 태그를 이용하여 스크롤이 수정한 답변으로 이동합니다.</li>
+      </ul>
+      <br>
+      <dir>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/9b98b547-676f-4536-932b-4fd3887fddec" width="55%" height="55%">
+      </dir>
+      <br>
+      <li>answer_delete</li>
+      <ul>
+        <li>질문 상세 화면에서 답변 삭제 위한 뷰함수입니다.</li>
+        <li>answer_id에 해당하는 답변 데이터를 answer에 담습니다.</li>
+        <li>해당 답변의 작성자와 요청자가 다를 경우 에러 메세지를 발생시켜 해당 답변이 있는 질문 상세 화면으로 보냅니다.</li>
+        <li>answer을 삭제한 후 해당 답변이 있었던 질문 상세 화면으로 이동합니다.</li>
+      </ul>
+      <br>
+      <dir>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/7de167b3-9cc8-4fa8-b219-92f7577ef354" width="55%" height="55%">
+      </dir>
+      <br>
+      <li>answer_vote</li>
+      <ul>
+        <li>질문 상세 화면에서 답변 추천을 위한 뷰함수입니다.</li>
+        <li>answer_id에 해당하는 답변 데이터를 answer에 담습니다.</li>
+        <li>해당 답변의 작성자와 요청자가 같을 경우 에러 메세지를 발생시킵니다.</li>
+        <li>해당 답변의 추천자에 요청자를 추가한 후 해당 답변이 있는 질문 상세 화면으로 이동합니다.</li>
+        <li>답변 추천 후 앵커 태그를 이용하여 스크롤이 추천한 답변으로 이동합니다.</li>
+      </ul>
+      <br>
+      <dir>
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/b041033f-8e89-4f95-b1b8-dd191f725761" width="55%" height="55%">
+      </dir>
+    </ul>
+  </ul>
+</ul>
+
 <ul>
   <li>HTML</li>
   <ul>
