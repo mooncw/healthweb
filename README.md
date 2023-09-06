@@ -243,7 +243,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       </ul>
       <br>
       <div>
-        <img src="https://github.com/mooncw/healthweb/assets/97713997/2dcc1249-f728-4499-953b-189aeb9caac9" width="55%" height="55%">
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/3c2f1c33-6807-43c5-ad45-2f747455a1b9" width="55%" height="55%">
       </div>
     </ul>
     <br>
@@ -315,6 +315,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
         <img src="https://github.com/mooncw/healthweb/assets/97713997/798fd23d-a3d8-46f8-aafc-d34caa2b4c8d" width="55%" height="55%">
       </dir>
       <br>
+      <br>
       <li>answer_modify</li>
       <ul>
         <li>질문 상세 화면에서 답변 수정을 위한 뷰함수입니다.</li>
@@ -329,6 +330,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
         <img src="https://github.com/mooncw/healthweb/assets/97713997/9b98b547-676f-4536-932b-4fd3887fddec" width="55%" height="55%">
       </dir>
       <br>
+      <br>
       <li>answer_delete</li>
       <ul>
         <li>질문 상세 화면에서 답변 삭제 위한 뷰함수입니다.</li>
@@ -340,6 +342,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       <dir>
         <img src="https://github.com/mooncw/healthweb/assets/97713997/7de167b3-9cc8-4fa8-b219-92f7577ef354" width="55%" height="55%">
       </dir>
+      <br>
       <br>
       <li>answer_vote</li>
       <ul>
@@ -356,16 +359,16 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
     </ul>
   </ul>
 </ul>
-
+<br>
 <ul>
   <li>HTML</li>
   <ul>
-    <li>일반 화면</li>
+    <li>질문 목록 화면</li>
     <div>
       <img src="https://github.com/mooncw/healthweb/assets/97713997/baab57b0-db8f-4572-9c8f-1ad899c5fdfc" width="90%" height="90%">
     </div>
     <br>
-    <li>글 클릭 후 화면</li>
+    <li>글 클릭 후 질문 상세 화면</li>
     <div>
       <img src="https://github.com/mooncw/healthweb/assets/97713997/aab7737d-7b50-4245-95ad-fa3cbb72367f" width="90%" height="90%">
     </div>
@@ -375,7 +378,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       <img src="https://github.com/mooncw/healthweb/assets/97713997/3bb04293-1d68-4227-b1fa-1518bf60dda5" width="90%" height="90%">
     </div>
     <br>
-    <li>검색 후 화면</li>
+    <li>검색 후 질문 목록 화면</li>
     <div>
       <img src="https://github.com/mooncw/healthweb/assets/97713997/ec6a3261-67e0-4245-827b-52d19b895dd2" width="90%" height="90%">
     </div>
