@@ -389,6 +389,48 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
 
 ### 5. Common 앱
 <ul>
+  <li>Model</li>
+  <ul>
+    장고 내장 모델인 User을 사용했습니다.
+  </ul>
+</ul>
+<ul>
+
+<ul>
+  <li>Views.py</li>
+  <ul>
+    <li>사용자의 요청을 받아 처리합니다.</li>
+    <li>LoginView, LogoutVuew</li>
+    <ul>
+      <li>장고 내장 기능인 로그인, 로그아웃 기능을 사용했습니다.</li>
+    </ul>
+    <li>signup</li>
+    <ul>
+      <li>회원가입을 위한 뷰함수입니다.</li>
+      <li>장고 내장 함수 authenticate, login를 사용했습니다.</li>
+      <li>GET 방식으로 동작하면 회원가입 폼을 보여줍니다.</li>
+      <li>POST 방식으로 동작하면 form이 유효하다면 form 내용을 User에 저장하고 유저이름과 비밀번호를 가져와 authenticate로 인증하고 login로 로그인 시킵니다.</li>
+    </ul>
+  </ul>
+  <br>
+  <div>
+    <img src="https://github.com/mooncw/healthweb/assets/97713997/135246ad-a960-4900-aa3b-f74889e55d58" width="68%" height="68%">
+  </div>
+</ul>
+
+
+<ul>
+  <li>Urls.py</li>
+  <ul>
+    <li>url과 view를 매칭시키는 역할을 합니다.</li>
+  </ul>
+  <br>
+  <div>
+    <img src="https://github.com/mooncw/healthweb/assets/97713997/a7e05479-4b72-439b-9ef0-8e8be38788c6" width="55%" height="55%">
+  </div>
+</ul>
+
+<ul>
   <li>HTML</li>
   <ul>
     <li>로그인 화면</li>
