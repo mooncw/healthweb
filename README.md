@@ -112,12 +112,25 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
   <li>Views.py</li>
   <ul>
     <li>사용자의 요청을 받아 처리합니다.</li>
-    <li>url에서 얻은 id 값에 매칭되는 데이터를 Exercises에서 가져와 html에 전달하고 처리 결과를 반환합니다.</li>
+    <li>index</li>
+    <ul>
+      <li>운동 선택 화면을 위한 뷰함수입니다.</li>
+    </ul>
+    <br>
+    <div>
+      <img src="https://github.com/mooncw/healthweb/assets/97713997/391781d3-7d75-4680-b6a0-1b969bec75ae" width="41%" height="41%">
+    </div>
+    <br>
+    <li>screen</li>
+    <ul>
+      <li>url에서 얻은 id 값에 매칭되는 데이터를 Exercises에서 가져와 html에 전달하고 처리 결과를 반환합니다.</li>
+    </ul>
+    <br>
+    <div>
+      <img src="https://github.com/mooncw/healthweb/assets/97713997/85d66763-2c2b-4b18-a2d3-f9255568fd1e" width="75%" height="75%">
+    </div>
+    <br>
   </ul>
-  <br>
-  <div>
-    <img src="https://github.com/mooncw/healthweb/assets/97713997/a33b3719-83b5-4847-b08b-f0d7847908b5" width="68%" height="68%">
-  </div>
 </ul>
 
 <ul>
@@ -176,7 +189,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
     </ul>
     <br>
     <div>
-      <img src="https://github.com/mooncw/healthweb/assets/97713997/2908e2f9-5ae2-4fde-9747-cb277ba79d8a" width="55%" height="55%">
+      <img src="https://github.com/mooncw/healthweb/assets/97713997/2908e2f9-5ae2-4fde-9747-cb277ba79d8a" width="75%" height="75%">
     </div>
   </ul>
   <br>
@@ -199,7 +212,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
     </ul>
     <br>
     <div>
-      <img src="https://github.com/mooncw/healthweb/assets/97713997/6352adfe-8d96-4bcd-97dc-3428b45b4259" width="55%" height="55%">
+      <img src="https://github.com/mooncw/healthweb/assets/97713997/6352adfe-8d96-4bcd-97dc-3428b45b4259" width="75%" height="75%">
     </div>
   </ul>  
 </ul>
@@ -211,7 +224,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
   </ul>
   <br>
   <div>
-    <img src="https://github.com/mooncw/healthweb/assets/97713997/2f939e3a-074a-4f13-9514-9569c963638d" width="55%" height="55%">
+    <img src="https://github.com/mooncw/healthweb/assets/97713997/2f939e3a-074a-4f13-9514-9569c963638d" width="88%" height="88%">
   </div>
 </ul>
 
@@ -232,7 +245,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       </ul>
       <br>
       <div>
-        <img src="https://github.com/mooncw/healthweb/assets/97713997/02997f9b-a050-468e-854d-03e2eaa582c8" width="55%" height="55%">
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/02997f9b-a050-468e-854d-03e2eaa582c8" width="60%" height="60%">
       </div>
       <br>
       <li>detail</li>
@@ -312,7 +325,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       </ul>
       <br>
       <dir>
-        <img src="https://github.com/mooncw/healthweb/assets/97713997/798fd23d-a3d8-46f8-aafc-d34caa2b4c8d" width="55%" height="55%">
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/798fd23d-a3d8-46f8-aafc-d34caa2b4c8d" width="85%" height="85%">
       </dir>
       <br>
       <br>
@@ -327,7 +340,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       </ul>
       <br>
       <dir>
-        <img src="https://github.com/mooncw/healthweb/assets/97713997/9b98b547-676f-4536-932b-4fd3887fddec" width="55%" height="55%">
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/9b98b547-676f-4536-932b-4fd3887fddec" width="85%" height="85%">
       </dir>
       <br>
       <br>
@@ -354,7 +367,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
       </ul>
       <br>
       <dir>
-        <img src="https://github.com/mooncw/healthweb/assets/97713997/b041033f-8e89-4f95-b1b8-dd191f725761" width="55%" height="55%">
+        <img src="https://github.com/mooncw/healthweb/assets/97713997/b041033f-8e89-4f95-b1b8-dd191f725761" width="85%" height="85%">
       </dir>
     </ul>
   </ul>
@@ -418,7 +431,7 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
   </div>
 </ul>
 
-
+<br>
 <ul>
   <li>Urls.py</li>
   <ul>
@@ -426,10 +439,11 @@ keypoint detection 모델을 이용한 운동 보조 웹 애플리케이션 (202
   </ul>
   <br>
   <div>
-    <img src="https://github.com/mooncw/healthweb/assets/97713997/a7e05479-4b72-439b-9ef0-8e8be38788c6" width="55%" height="55%">
+    <img src="https://github.com/mooncw/healthweb/assets/97713997/a7e05479-4b72-439b-9ef0-8e8be38788c6" width="85%" height="85%">
   </div>
 </ul>
 
+<br>
 <ul>
   <li>HTML</li>
   <ul>
